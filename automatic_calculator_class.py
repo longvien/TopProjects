@@ -20,27 +20,29 @@ class Division(Calculation):
     def calculate(self):
         return self.first / self.second
 
-cal_symbols = {
-    '+': Addition,
-    '-': Subtraction,
-    '*': Multiplication,
-    '/': Division
-}
+# Main Program
+def main():
+    cal_symbols = {
+        '+': Addition,
+        '-': Subtraction,
+        '*': Multiplication,
+        '/': Division
+    }
 
-symbol = input('Pls choose a calculate symbol: + - * / \n')
-if symbol in cal_symbols:
-    check = True
-    try: 
-        first_num = int(float(input('Pls enter the first number:\n')))
-        second_num = int(float(input('Pls enter the second number:\n')))
-        if second_num == 0 and symbol == '/':
-            print("Zero Division Error: Second Value can't be 0!")
-            quit()
-        calculate = cal_symbols[symbol](first_num, second_num)
-        print('The result of', first_num, symbol , second_num, 'is', float(calculate.calculate()))
-    except:
-        print("Invalid Syntax! Try again!")
-else:
-    print("Invalid Symbol:", symbol)
-    
-    
+    symbol = input('Pls choose a calculate symbol: + - * / \n')
+    if symbol in cal_symbols:
+        check = True
+        try: 
+            first_num = int(float(input('Pls enter the first number:\n')))
+            second_num = int(float(input('Pls enter the second number:\n')))
+            if second_num == 0 and symbol == '/':
+                print("Zero Division Error: Second Value can't be 0!")
+                quit()
+            calculate = cal_symbols[symbol](first_num, second_num)
+            print('The result of', first_num, symbol , second_num, 'is', float(calculate.calculate()))
+        except:
+            print("Invalid Syntax! Try again!")
+    else:
+        print("Invalid Symbol:", symbol)
+main()
+#Author: Long Vien
