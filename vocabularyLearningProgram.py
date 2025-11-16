@@ -43,6 +43,7 @@ class Learn(Insert):
                 print('=====================================================')
                 break
 
+# Main Program
 def main():
     l1 = input('Please enter the first language\n')
     print('--------------------------------------------------')
@@ -52,4 +53,4 @@ def main():
     translator.learn()
 main()
 
-#Autor: Long Vien
+#Author: Long Vien

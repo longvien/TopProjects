@@ -86,4 +86,4 @@ def main():
         print('Pls enter a valid number')
 
 main()
-#Autor: Long Vien 
+#Author: Long Vien 
