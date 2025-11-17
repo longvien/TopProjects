@@ -45,4 +45,4 @@ def main():
     else:
         print("Invalid Symbol:", symbol)
 main()
-#Author: Long Vie
+#Author: Long Vien
